@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery - Serene Styles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body { font-family: 'Montserrat', sans-serif; }
+      h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <!-- Navbar -->
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-serif text-pink-300">Serene Styles</a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="index.html" class="hover:text-pink-200">Home</a>
+                <a href="gallery.html" class="hover:text-pink-200">Gallery</a>
+                <a href="services.html" class="hover:text-pink-200">Services</a>
+                <a href="about.html" class="hover:text-pink-200">About Us</a>
+                <a href="contact.html" class="bg-pink-300 hover:bg-pink-400 text-gray-900 font-semibold py-2 px-4 rounded-md transition duration-300">Book Now</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <main>
+      <section class="py-16 bg-gray-900 min-h-[60vh]">
+        <div class="max-w-5xl mx-auto text-center px-4">
+          <h1 class="text-5xl font-bold text-pink-300 mb-6">Gallery</h1>
+          <p class="text-lg text-gray-300 mb-10">Click any image to enlarge.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+                <img src="images/1.jpg" alt="Gallery 1"
+                    class="rounded-lg shadow-md aspect-square object-cover cursor-pointer gallery-img">
+                <img src="images/2.jpg" alt="Gallery 2"
+                    class="rounded-lg shadow-md aspect-square object-cover cursor-pointer gallery-img">
+                <img src="images/3.jpg" alt="Gallery 3"
+                    class="rounded-lg shadow-md aspect-square object-cover cursor-pointer gallery-img">
+                <img src="images/4.jpg" alt="Gallery 4"
+                    class="rounded-lg shadow-md aspect-square object-cover cursor-pointer gallery-img">
+            </div>
+
+          <a href="index.html" class="inline-block mt-6 bg-pink-300 hover:bg-pink-400 text-gray-900 font-semibold py-3 px-8 rounded-lg text-lg transition">Back to Home</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal for enlarged images -->
+    <div id="imageModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
+        <img id="modalImg" src="" alt="Enlarged image" class="max-w-[90vw] max-h-[85vh] rounded-lg shadow-2xl">
+        <button id="closeModal" class="absolute top-8 right-8 text-white text-4xl hover:text-pink-300 transition">&times;</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8 text-center">
+        <p class="text-xl font-serif text-pink-300 mb-2">Serene Styles</p>
+        <p class="text-gray-400 mb-2">[123 Elegant Street, Your Town, County, Postcode], England</p>
+        <p class="text-gray-400 mb-2">Tel: <a href="tel:+440123456789">+44 (0)123 456 789</a> | Email: <a href="mailto:hello@serenestyles.co.uk">hello@serenestyles.co.uk</a></p>
+        <p class="text-sm text-gray-500">&copy; <span id="currentYear"></span> Serene Styles. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Simple Modal Script -->
+    <script>
+      // Current year in footer
+      document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+      // Gallery modal functionality
+      const galleryImgs = document.querySelectorAll('.gallery-img');
+      const imageModal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImg');
+      const closeModal = document.getElementById('closeModal');
+
+      galleryImgs.forEach(img => {
+        img.addEventListener('click', () => {
+          imageModal.classList.remove('hidden');
+          imageModal.classList.add('flex');
+          modalImg.src = img.src;
+          modalImg.alt = img.alt;
+        });
+      });
+
+      closeModal.addEventListener('click', () => {
+        imageModal.classList.add('hidden');
+        imageModal.classList.remove('flex');
+        modalImg.src = '';
+      });
+
+      imageModal.addEventListener('click', function (e) {
+        if (e.target === imageModal) {
+          imageModal.classList.add('hidden');
+          imageModal.classList.remove('flex');
+          modalImg.src = '';
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === "Escape") {
+          imageModal.classList.add('hidden');
+          imageModal.classList.remove('flex');
+          modalImg.src = '';
+        }
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Services – Serene Styles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+  <!-- Navbar -->
+  <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-3xl font-serif text-pink-300">Serene Styles</a>
+      <nav class="hidden md:flex space-x-6 items-center">
+        <a href="index.html" class="hover:text-pink-200">Home</a>
+        <a href="gallery.html" class="hover:text-pink-200">Gallery</a>
+        <a href="services.html" class="hover:text-pink-200 border-b-2 border-pink-300 pb-1">Services</a>
+        <a href="about.html" class="hover:text-pink-200">About Us</a>
+        <a href="contact.html" class="bg-pink-300 hover:bg-pink-400 text-gray-900 font-semibold py-2 px-4 rounded-md transition duration-300">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Intro -->
+  <section class="relative w-full min-h-[250px] flex items-center justify-center bg-gray-900">
+    <div class="w-full max-w-3xl mx-auto text-center py-12 px-4">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-pink-200 mb-6">Our Services</h1>
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-4">
+        Expert care, creative flair—explore our full range of luxury hairdressing services.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-16 bg-gray-800">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-10">
+        <!-- Service Card 1 -->
+        <div class="bg-gray-900 rounded-xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-2xl transition">
+          <img src="images/1.jpg" alt="Cut & Finish" class="rounded-full w-24 h-24 object-cover mb-4 border-4 border-pink-200 shadow">
+          <h3 class="text-2xl font-bold text-pink-200 mb-2">Cut & Finish</h3>
+          <p class="text-gray-300 mb-4">Precision cutting tailored to your style and lifestyle, with a luxurious finish and blow-dry.</p>
+          <div class="text-pink-100 font-semibold text-lg">from £35</div>
+        </div>
+        <!-- Service Card 2 -->
+        <div class="bg-gray-900 rounded-xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-2xl transition">
+          <img src="images/2.jpg" alt="Creative Colour" class="rounded-full w-24 h-24 object-cover mb-4 border-4 border-pink-200 shadow">
+          <h3 class="text-2xl font-bold text-pink-200 mb-2">Creative Colour</h3>
+          <p class="text-gray-300 mb-4">Balayage, highlights, all-over colour, and bespoke blends to express your personality.</p>
+          <div class="text-pink-100 font-semibold text-lg">from £55</div>
+        </div>
+        <!-- Service Card 3 -->
+        <div class="bg-gray-900 rounded-xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-2xl transition">
+          <img src="images/3.jpg" alt="Styling & Treatments" class="rounded-full w-24 h-24 object-cover mb-4 border-4 border-pink-200 shadow">
+          <h3 class="text-2xl font-bold text-pink-200 mb-2">Styling & Treatments</h3>
+          <p class="text-gray-300 mb-4">From glamorous blow-dries and up-dos to nourishing, restorative treatments for all hair types.</p>
+          <div class="text-pink-100 font-semibold text-lg">from £25</div>
+        </div>
+      </div>
+      <!-- Optional: Add more service cards here -->
+      <div class="mt-12 flex flex-col items-center">
+        <a href="contact.html" class="bg-pink-300 hover:bg-pink-400 text-gray-900 font-semibold py-3 px-8 rounded-lg text-lg transition shadow-lg">Book Your Appointment</a>
+        <p class="text-sm text-gray-400 mt-4">All prices from, and may vary depending on hair length and requirements. For a personalised quote, please get in touch.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extras / Why Choose Us -->
+  <section class="py-16 bg-gray-900">
+    <div class="max-w-5xl mx-auto text-center px-4">
+      <h2 class="text-3xl font-bold text-pink-300 mb-8">Why Choose Serene Styles?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-800 rounded-xl shadow-lg p-6">
+          <h3 class="text-lg font-semibold text-pink-200 mb-2">Expert Team</h3>
+          <p class="text-gray-300 text-sm">Our stylists are passionate professionals with years of experience and up-to-date training.</p>
+        </div>
+        <div class="bg-gray-800 rounded-xl shadow-lg p-6">
+          <h3 class="text-lg font-semibold text-pink-200 mb-2">Personal Service</h3>
+          <p class="text-gray-300 text-sm">We listen to you, advise you, and tailor every service to your unique needs and lifestyle.</p>
+        </div>
+        <div class="bg-gray-800 rounded-xl shadow-lg p-6">
+          <h3 class="text-lg font-semibold text-pink-200 mb-2">Luxury Experience</h3>
+          <p class="text-gray-300 text-sm">Enjoy complimentary refreshments, a relaxing vibe, and premium products—every visit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-8 text-center">
+      <p class="text-xl font-serif text-pink-300 mb-2">Serene Styles</p>
+      <p class="text-gray-400 mb-2">[123 Elegant Street, Your Town, County, Postcode], England</p>
+      <p class="text-gray-400 mb-2">Tel: <a href="tel:+440123456789">+44 (0)123 456 789</a> | Email: <a href="mailto:hello@serenestyles.co.uk">hello@serenestyles.co.uk</a></p>
+      <p class="text-sm text-gray-500">&copy; <span id="currentYear"></span> Serene Styles. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Current year in footer
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
